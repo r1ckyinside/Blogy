@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blogy</title>
+    <base href="/">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <logo>
+        <div class="logo"><span class="d301"></span ><span>BLOGY</span><span class="d302"></span></div>
+        <p class="disc">by Ricky</p>
+    </logo>
+    <content>
+        <hr class="top_hr">
+            {% block content %}
+            {% endblock %}
+    </content>
+</body>
+
+</html>

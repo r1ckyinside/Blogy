@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    {% for post in post_list %}
+        <div id="rectangle">
+                <h1 class="post_title">{{ post.title }}</h1>
+            <div class="content">
+                <img class="post_img" src="{{ post.img.url }}" width="50%"/>
+                <p class="post_text">{{ post.text }}</p>
+                <div class="post_info">
+                    <p class="post_author">by {{ post.author }}</p>
+                    <p class="post_date">{{ post.date }}</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}
